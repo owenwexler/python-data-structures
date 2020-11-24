@@ -94,6 +94,8 @@ class SinglyLinkedList:
       if current_node.value == val:
         if not current_node.next:
           self.tail = prev_node
+          self.tail.next = None
+          return current_node
         else:
           prev_node.next = current_node.next
           return current_node
@@ -121,4 +123,8 @@ print("length: " + str(llist.length()))
 llist.remove(8)
 print(llist.log())
 print("contains 8: " + str(llist.contains(8)))
+print("length: " + str(llist.length()))
+llist.remove(9)
+print(llist.log())
+print("contains 9: " + str(llist.contains(9)))
 print("length: " + str(llist.length()))
