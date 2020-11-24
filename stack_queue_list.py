@@ -17,6 +17,43 @@ class Stack:
   def log(self):
     return self._data
 
+class Queue():
+  def __init__(self):
+    self._data = []
+
+  def enqueue(self, val):
+    self._data.append(val)
+    return
+
+  def dequeue(self):
+    removed_item = self._data[0]
+    self._data.remove(self._data[0])
+    return removed_item
+
+  def length(self):
+    return len(self._data)
+
+  def log(self):
+    return self._data
+
+# test_queue = Queue()
+# test_queue.enqueue(1)
+# test_queue.enqueue(2)
+# test_queue.enqueue(3)
+# test_queue.enqueue(4)
+# print("current queue: ", test_queue.log())
+# print("length: ", test_queue.length())
+# print(test_queue.dequeue())
+# print("current queue: ", test_queue.log())
+# print("length: ", test_queue.length())
+# test_queue.enqueue(5)
+# test_queue.enqueue(6)
+# print("current queue: ", test_queue.log())
+# print("length: ", test_queue.length())
+# print(test_queue.dequeue())
+# print("current queue: ", test_queue.log())
+# print("length: ", test_queue.length())
+
 # test_stack = Stack()
 # test_stack.push(4)
 # test_stack.push(3)
